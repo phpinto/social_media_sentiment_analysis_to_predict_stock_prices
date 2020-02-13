@@ -7,86 +7,106 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 
 require_once('vendor/autoload.php');
 $host = 'http://localhost:4444';
+$conn = mysqli_connect('localhost', 'root', '', 'cse_6240');
+
+$years = array();
+for ($i = 2019; $i > 1995; $i--) {
+    if ($i > 2012 || $i < 2007) array_push($years,$i);
+}
 
 $capabilities = DesiredCapabilities::chrome();
 $driver = RemoteWebDriver::create($host, $capabilities);
 
-$years = array();
-for ($i = 2019; $i > 1995; $i--) {
-    array_push($years,$i);
-}
-/*
 foreach ($years as $year) {
     $driver->get('https://fortune.com/fortune500/'. $year .'/search/');
-    $historyButton = $driver->findElement(
-        WebDriverBy::cssSelector('#ca-history a')
-    );
-}*/
+    $driver->manage()->window()->maximize();
+    sleep(15);
 
-$driver->get('https://fortune.com/fortune500/'. $years[0] .'/search/');
-
-
-$driver->manage()->window()->maximize();
-
-$select = $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[2]/div/div[2]/span[2]'))
+    $select = $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[2]/div/div[2]/span[2]'))
                  ->findElement(WebDriverBy::cssSelector("option[value='100']"))
                  ->click();
- 
-$table = $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[1]/div[2]'));
+    for ($i = 0; $i < 5; $i++) {
+        $table = $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[1]/div[2]'));
+        for ($j = 1; $j <= 100; $j++) {
+            $div = $table->findElement(WebDriverBy::xpath('div['. $j .']'));
+            $columns = explode("\n",$div->getText());
+            if ($year > 2016) {
+                $rank = (int)$columns[0];
+                $name = preg_replace('/[\']+/', '', $columns[1]);
+                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
+                $revenue_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[3]);
+                $profits = (float)preg_replace('/[^0-9-.]+/', '', $columns[4]);
+                $profits_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[5]);
+                $assets = (float)preg_replace('/[^0-9.]+/', '', $columns[6]);
+                $market_cap = (float)preg_replace('/[^0-9.]+/', '', $columns[7]);
+                $change_in_rank = ($columns[10] == '-' ? 0 : (int)$columns[10]);
+                $employees = (float)preg_replace('/[^0-9]+/', '', $columns[9]);
 
-for ($i = 1; $i <= 1; $i++) {
-    $div = $table->findElement(WebDriverBy::xpath('div['. $i .']'));
-    print $div->getText();
+                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`, `revenue_percent_change`, `profits`, `profits_percent_change`, `assets`, `market_cap`, `change_in_rank`, `employees`) VALUES ('$year','$rank', '$name', '$revenues', '$revenue_perc', '$profits', '$profits_perc', '$assets', '$market_cap', '$change_in_rank', '$employees')";
+                $select_query = "SELECT * FROM `fortune_500` WHERE `name` = '$name' AND `year` = '$year'";
+                $result = mysqli_query($conn, $select_query);
+                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
+            }
+            elseif ($year == 2016) {
+                $rank = (int)$columns[0];
+                $name = preg_replace('/[\']+/', '', $columns[1]);
+                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
+                $revenue_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[3]);
+                $profits = (float)preg_replace('/[^0-9-.]+/', '', $columns[4]);
+                $profits_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[5]);
+                $assets = (float)preg_replace('/[^0-9.]+/', '', $columns[6]);
+                $market_cap = (float)preg_replace('/[^0-9.]+/', '', $columns[8]);
+                $employees = (float)preg_replace('/[^0-9]+/', '', $columns[7]);
+
+                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`, `revenue_percent_change`, `profits`, `profits_percent_change`, `assets`, `market_cap`, `employees`) VALUES ('$year','$rank', '$name', '$revenues', '$revenue_perc', '$profits', '$profits_perc', '$assets', '$market_cap', '$employees')";
+                $select_query = "SELECT * FROM `fortune_500` WHERE `name` = '$name' AND `year` = '$year'";
+                $result = mysqli_query($conn, $select_query);
+                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
+            }
+            elseif ($year == 2015) {
+                $rank = (int)$columns[0];
+                $name = preg_replace('/[\']+/', '', $columns[1]);
+                $revenue_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[2]);
+                $profits = (float)preg_replace('/[^0-9-.]+/', '', $columns[3]);
+                $profits_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[4]);
+                $assets = (float)preg_replace('/[^0-9.]+/', '', $columns[5]);
+                $market_cap = (float)preg_replace('/[^0-9.]+/', '', $columns[7]);
+                $employees = (float)preg_replace('/[^0-9]+/', '', $columns[6]);
+
+                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenue_percent_change`, `profits`, `profits_percent_change`, `assets`, `market_cap`, `employees`) VALUES ('$year','$rank', '$name', '$revenue_perc', '$profits', '$profits_perc', '$assets', '$market_cap', '$employees')";
+                $select_query = "SELECT * FROM `fortune_500` WHERE `name` = '$name' AND `year` = '$year'";
+                $result = mysqli_query($conn, $select_query);
+                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
+            }
+            elseif ($year == 2014 || $year == 2013) {
+                $rank = (int)$columns[0];
+                $name = preg_replace('/[\']+/', '', $columns[1]);
+                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
+                $revenue_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[3]);
+                $profits = (float)preg_replace('/[^0-9-.]+/', '', $columns[4]);
+                $profits_perc = (float)preg_replace('/[^0-9-.]+/', '', $columns[5]);
+                $assets = (float)preg_replace('/[^0-9.]+/', '', $columns[6]);
+                $market_cap = (float)preg_replace('/[^0-9.]+/', '', $columns[8]);
+
+                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`, `revenue_percent_change`, `profits`, `profits_percent_change`, `assets`, `market_cap`) VALUES ('$year','$rank', '$name', '$revenues', '$revenue_perc', '$profits', '$profits_perc', '$assets', '$market_cap')";
+                $select_query = "SELECT * FROM `fortune_500` WHERE `name` = '$name' AND `year` = '$year'";
+                $result = mysqli_query($conn, $select_query);
+                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
+            }
+            elseif ($year < 2007) {
+                $rank = (int)$columns[0];
+                $name = preg_replace('/[\']+/', '', $columns[1]);
+                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
+                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`) VALUES ('$year','$rank', '$name', '$revenues')";
+                $select_query = "SELECT * FROM `fortune_500` WHERE `name` = '$name' AND `year` = '$year'";
+                $result = mysqli_query($conn, $select_query);
+                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
+            }
+        }
+        $next =  $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[2]/div/div[3]/button'))->click();
+    }
+
 }
-                 
-/*
-$driver->get('https://en.wikipedia.org/wiki/Selenium_(software)');
-$driver->findElement(WebDriverBy::id('searchInput')) // find search input element
-    ->sendKeys('PHP') // fill the search box
-    ->submit();
 
-$driver->wait()->until(
-    WebDriverExpectedCondition::elementTextContains(WebDriverBy::id('firstHeading'), 'PHP')
-);
+$driver->quit();
 
-echo "The title is '" . $driver->getTitle() . "'\n";
-
-// print URL of current page to output
-echo "The current URL is '" . $driver->getCurrentURL() . "'\n";
-
-// find element of 'History' item in menu
-$historyButton = $driver->findElement(
-    WebDriverBy::cssSelector('#ca-history a')
-);
-
-// read text of the element and print it to output
-echo "About to click to button with text: '" . $historyButton->getText() . "'\n";
-
-// click the element to navigate to revision history page
-$historyButton->click();
-
-// wait until the target page is loaded
-$driver->wait()->until(
-    WebDriverExpectedCondition::titleContains('Revision history')
-);
-
-// print the title of the current page
-echo "The title is '" . $driver->getTitle() . "'\n";
-
-// print the URI of the current page
-
-echo "The current URI is '" . $driver->getCurrentURL() . "'\n";
-
-// delete all cookies
-$driver->manage()->deleteAllCookies();
-
-// add new cookie
-$cookie = new Cookie('cookie_set_by_selenium', 'cookie_value');
-$driver->manage()->addCookie($cookie);
-
-// dump current cookies to output
-$cookies = $driver->manage()->getCookies();
-print_r($cookies);
-
-// close the browser
-$driver->quit();*/
