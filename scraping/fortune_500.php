@@ -94,25 +94,6 @@ foreach ($years as $year) {
                 $result = mysqli_query($conn, $select_query);
                 if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
             }
-            elseif ($year == 2012) {
-                $rank = (int)$columns[0];
-                $name = preg_replace('/[\']+/', '', $columns[1]);
-                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
-
-                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`) VALUES ('$year','$rank', '$name', '$revenues')";
-                $select_query = "SELECT * FROM `fortune_500` WHERE `rank` = '$rank' AND `year` = '$year'";
-                $result = mysqli_query($conn, $select_query);
-                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
-            }
-            elseif ($year < 2007) {
-                $rank = (int)$columns[0];
-                $name = preg_replace('/[\']+/', '', $columns[1]);
-                $revenues = (float)preg_replace('/[^0-9.]+/', '', $columns[2]);
-                $insert_query = "INSERT INTO `fortune_500` (`year`, `rank`, `name`, `revenues`) VALUES ('$year','$rank', '$name', '$revenues')";
-                $select_query = "SELECT * FROM `fortune_500` WHERE `rank` = '$rank' AND `year` = '$year'";
-                $result = mysqli_query($conn, $select_query);
-                if (mysqli_num_rows($result) == 0) mysqli_query($conn, $insert_query);
-            }
         }
         $next =  $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div/div[2]/div/div[2]/div/div[3]/button'))->click();
     }
