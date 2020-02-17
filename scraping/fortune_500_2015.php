@@ -15,7 +15,7 @@ $driver->get('https://fortune.com/fortune500/2015/walmart');
 $driver->manage()->window()->maximize();
 
 for ($i = 0; $i < 499; $i++) {
-    sleep(5);
+    sleep(10);
     
     $revenues =  $driver->findElement(WebDriverBy::xpath('//*[@id="content"]/div[3]/ul/li[2]/div[2]'))->getText();
     $revenues = (float)preg_replace('/[^0-9.]+/', '', $revenues);
