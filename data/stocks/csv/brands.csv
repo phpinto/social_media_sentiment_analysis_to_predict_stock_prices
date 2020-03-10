@@ -1,0 +1,172 @@
+"id","name","company_id","hashtag","twitter_handle","subreddit"
+"1","Microsoft","1","microsoft","Microsoft","microsoft"
+"2","Microsoft Office","1","microsoftoffice","Office","Office365"
+"3","Windows","1","windows10","Windows","windows"
+"4","Xbox","1","xbox","Xbox","xboxone"
+"5","Microsoft Surface","1","microsoftsurface","surface","Surface"
+"6","Apple","2","apple","Apple","apple"
+"7","iPhone","2","iphone","Apple","iphone"
+"8","MacBook","2","macbook","Apple","macbookpro"
+"9","macOS","2","macos","Apple","MacOS"
+"10","AirPods","2","airpods","Apple","airpods"
+"11","Apple Watch","2","applewatch","Apple","AppleWatch"
+"12","iOS","2","ios","Apple","ios"
+"13","Amazon","3","amazon","amazon","amazon"
+"14","Amazon Prime","3","amazonprime","amazon","amazonprime"
+"15","Amazon Prime Video","3","primevideo","PrimeVideo","BestOfAmazonPrime"
+"16","Amazon Web Services","3","awscloud","awscloud","aws"
+"17","AWS","3","aws","awscloud",NULL
+"18","Amazon Echo","3","amazonecho","amazon","amazonecho"
+"19","Alexa","3","amazonalexa","alexa99","alexa"
+"20","IMDb","3","imdb","IMDb","imdb"
+"21","Twitch","3","twitch","Twitch","Twitch"
+"22","Whole Foods","3","wholefoods","WholeFoods","wholefoods"
+"23","Zappos","3","zappos","Zappos","Zappos"
+"24","LinkedIn","1","linkedin","LinkedIn","linkedin"
+"25","GitHub","1","github","github","github"
+"26","Apple TV","2","appletv","AppleTV","appletv"
+"27","Facebook","4","facebook","Facebook","facebook"
+"28","Instagram","4","instagram","instagram","Instagram"
+"29","WhatsApp","4","whatsapp","WhatsApp","whatsapp"
+"30","Oculus","4","oculus","oculus","oculus"
+"31","Facebook Watch","4","facebookwatch","FacebookWatch",NULL
+"32","Messenger","4","messenger","messenger","facebookmessenger"
+"33","Google","5","google","Google","google"
+"34","Android","5","android","Android",
+"35","YouTube","5","youtube","YouTube","youtube"
+"36","Gmail","5","gmail","gmail","GMail"
+"37","Google Maps","5","googlemaps","googlemaps","GoogleMaps"
+"38","Google Docs","5","googledocs","googledocs",NULL
+"39","Google Drive","5","googledrive","googledrive",NULL
+"40","Google Chrome","5","googlechrome","googlechrome","chrome"
+"70","Uber Eats","10","ubereats","UberEats",NULL
+"69","Uber","10","uber","Uber","uber"
+"68","Dell Latitude","9","delllatitude","Dell",NULL
+"67","Alienware","9","alienware","Alienware","Alienware"
+"66","Dell Inspiron","9","dellinspiron","Dell",NULL
+"65","Dell Monitor","9","dellmonitor","Dell",NULL
+"64","Dell Vostro","9","dellvostro","Dell",NULL
+"63","Dell XPS","9","dellxps","Dell",NULL
+"62","Dell","9","dell","Dell","Dell"
+"61","HP Printer","8","hpprinter","HP",NULL
+"60","Hewlett Packard","8","hewlettpackard","HP",NULL
+"59","HP Computer","8","hpcomputer","HP","Hewlett_Packard"
+"58","Twitter","7","twitter","Twitter","Twitter"
+"57","eBay","6","ebay","eBay","Ebay"
+"71","Jump Scooter","10","jumpscooter","Uber",NULL
+"72","Lyft","11","lyft","lyft","Lyft"
+"73","Snapchat","12","snapchat","Snapchat","snapchat"
+"74","Spotify","13","spotify","Spotify","spotify"
+"75","Spotify Premium","13","spotifypremium","Spotify",NULL
+"76","Grubhub","121","grubhub","Grubhub","grubhub"
+"77","HP Deskjet","8","hpdeskjet","HP",NULL
+"78","HP Inkjet","8","hpinkjet","HP",NULL
+"79","HP Lasejet","8","hplaserjet","HP",NULL
+"80","HP Spectre","8","hpspectre","HP",NULL
+"81","AT&T","14","att","ATT","ATT"
+"82","U-Verse","14","uverse","Uverse","uverse"
+"83","DirecTV","14","directv","DIRECTV","DirecTV"
+"84","AT&T TV","14","atttv","ATT","AttTVNow"
+"85","WarnerMedia","14","warnermedia","WarnerMediaGrp","WarnerMedia"
+"86","Time Warner","14","timewarner","WarnerMediaGrp",NULL
+"87","T-Mobile","15","tmobile","TMobile","tmobile"
+"88","Sprint","16","sprint","sprint","Sprint"
+"89","Verizon","17","verizon","verizon","verizon"
+"90","Verizon Wireless","17","verizonwireless","verizon",NULL
+"91","Chase","18","chase","Chase","Chase"
+"92","Chase Bank","18","chasebank","Chase",NULL
+"93","Citi","19","citi","Citi","citibank"
+"94","Citi Bank","19","citibank","Citibank",NULL
+"95","Bank of America","20","bankofamerica","BankofAmerica","BankOfAmerica"
+"96","BofA","20","bofa","
+BankofAmerica
+",NULL
+"97","Wells Fargo","21","wellsfargo","WellsFargo","WellsFargo"
+"98","Wells Fargo Bank","21","wellsfargobank","WellsFargo",NULL
+"99","HP Laptop","8","hplaptop","HP",NULL
+"100","Dell Laptop","8","delllaptop","Dell",NULL
+"101","US Bank","22","usbank","usbank",NULL
+"102","US Bancorp","22","usbancorp","usbank",NULL
+"103","Truist","23","truist","BBT",NULL
+"104","SunTrust","23","suntrust","SunTrust",NULL
+"105","SunTrust Bank","23","suntrustbank","SunTrust",NULL
+"106","BB&T","23","bbandt","BBT",NULL
+"107","BB&T Bank","23","bbtbank","BBT",NULL
+"108","PNC","24","pnc","PNCBank",NULL
+"109","PNC Bank","24","pncbank","PNCBank_Help",NULL
+"110","PNC Financial","24","pncfinancial","PNCNews",NULL
+"111","Visa Inc","25","visainc","Visa",NULL
+"112","Visa Card","25","visacard","VisaUK",NULL
+"113","Visa Credit Card","25","visacreditcard","Visamiddleeast",NULL
+"114","Visa Debit","25","visadebit","VisaSecurity",NULL
+"115","Visa Credit","25","visacredit","VisaNews",NULL
+"116","Visa Debit Card","25","visadebitcard","Visa_IND",NULL
+"117","VisaNet","25","visanet","VisaNewsEurope",NULL
+"118","Visa Checkout","25","visacheckout","VisaCheckout",NULL
+"119","Mastercard","26","mastercard","Mastercard",NULL
+"120","Mastercard Maestro","26","mastercardmaestro","MastercardNews",NULL
+"121","Mastercard Cirrus","26","mastercardcirrus","mastercardindia",NULL
+"122","Master Card Debit","26","mastercarddebit","MastercardUK",NULL
+"123","Mastercard Debit Card","26","mastercarddebitcard","MastercardEU",NULL
+"124","Mastercard Credit","26","mastercardcredit","wearemastercard",NULL
+"125","Mastercard Credit Card","26","mastercardcreditcard","MastercardCA",NULL
+"126","PayPal","27","paypal","PayPal","paypal"
+"127","PayPal Credit","27","paypalcredit","AskPayPal",NULL
+"128","PayPal Inc","27","paypalinc","PayPalUK",NULL
+"129","PayPal Credit Card","27","paypalcreditcard","PayPalIN",NULL
+"130","American Express","28","americanexpress","AmericanExpress","amex"
+"131","Amex","28","amex","AskAmex",NULL
+"132","American Express Credit","28","americanexpresscredit","AmexUK",NULL
+"133","Amex Credit","28","amexcredit","AmexBusiness",NULL
+"134","American Express Credit Card","28","americanexpresscreditcard","amexgbtfinland",NULL
+"135","Amex Credit Card","28","amexcreditcard","AmexBusinessCan",NULL
+"136","American Express Gold","28","americanexpressgold","AmexBusinessUK",NULL
+"137","Amex Gold","28","amexgold","AmericanExpress",NULL
+"138","Discover Card","29","discovercard","Discover",NULL
+"139","Discover Financial","29","discoverfinancial","Discover",NULL
+"140","Discover It","29","discoverit","Discover",NULL
+"141","Discover Credit","29","discovercredit","Discover",NULL
+"142","Discover Credit Card","29","discovercreditcard","Discover",NULL
+"143","Discover Debit","29","discoverdebit","Discover",NULL
+"144","Discover Cash Back","29","discovercashback","Discover",NULL
+"145","Discover Loans","29","discoverloans","Discover",NULL
+"146","Capital One","30","capitalone","CapitalOne","CapitalOne"
+"147","Capital One Card","30","capitalonecard","AskCapitalOne",NULL
+"148","Capital One Credit","30","capitalonecredit","CapitalOneCA",NULL
+"149","Capital One Credit Card","30","capitalonecreditcard","CapitalOneArena",NULL
+"150","Capital One Venture","30","capitaloneventure","CapitalOneSpark",NULL
+"151","Capital One Cafe","30","capitalonecafe","CapitalOneCafe",NULL
+"152","Capital One Quicksilver","30","capitalonequicksilver","capitalonenews",NULL
+"153","Capital One Savor","30","capitalonesavor","capitalonejobs",NULL
+"154","Lyft Scooter","11","lyftscooter","lyft",NULL
+"155","Netflix","31","netflix","netflix","netflix"
+"156","Netflix Streaming","31","netflixstreaming","NetflixUK",NULL
+"157","Netflix Shows","31","netflixshows","NetflixIndia",NULL
+"158","Netflix Originals","31","netflixoriginals","Netflix_PH",NULL
+"159","Netflix Inc","31","netflixinc","Netflixhelps",NULL
+"160","Dish Network","32","dishnetwork","dish","dishnetwork"
+"161","Dish Cable","32","dishcable","dish_answers",NULL
+"162","Sling TV","32","slingtv","Sling","slingtv"
+"163","Dish Satellite","32","dishsatellite","DishTV_India",NULL
+"164","Comcast","33","comcast","comcast","Comcast"
+"165","Xfinity","33","xfinity","Xfinity","Comcast_Xfinity"
+"166","Comcast Xfinity","33","comcastxfinity","Xfinity",NULL
+"167","NBC","33","nbc","NBCNews","nbc"
+"168","NBC Universal","33","nbcuniversal","NBCUniversal",NULL
+"169","MSNBC","33","msnbc","MSNBC","msnbc"
+"170","CNBC","33","cnbc","CNBC",NULL
+"171","Comcast Cable","33","comcastcable","cocmast",NULL
+"172","Universal Studios","33","universalstudios","UniversalORL","universalstudios"
+"173","ViacomCBS","34","viacomcbs","ViacomCBS",NULL
+"174","Viacom","34","viacom","viacomcbs",NULL
+"175","CBS","34","cbs","CBS","CBS"
+"176","Nickelodeon","34","nickelodeon","Nickelodeon","nickelodeon"
+"177","MTV","34","mtv","MTV","MTV"
+"178","Comedy Central","34","comedycentral","ComedyCentral","ComedyCentral"
+"179","CBS News","34","cbsnews","CBSNews",NULL
+"180","CBS Sports","34","cbssports","CBSSports",NULL
+"181","Fox","35","fox","FOXTV",NULL
+"182","Fox News","35","foxnews","FoxNews","FOXNEWS"
+"183","Fox Business","35","foxbusiness","FoxBusiness",NULL
+"184","Fox Sports","35","foxsports","FOXSports",NULL
+"185","FS1","35","fs1","FS1",NULL

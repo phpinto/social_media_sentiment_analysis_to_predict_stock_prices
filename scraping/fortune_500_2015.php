@@ -7,7 +7,11 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 
 require_once('vendor/autoload.php');
 $host = 'http://localhost:4444';
-$conn = mysqli_connect('localhost', 'root', '', 'cse_6240');
+$host = env('DB_HOST');
+$db_user = env('DB_USERNAME');
+$db_password = env('DB_PASSWORD');
+$db = env('DB_NAME');
+$conn = mysqli_connect($host,$db_user,$db_password,$db);
 
 $capabilities = DesiredCapabilities::chrome();
 $driver = RemoteWebDriver::create($host, $capabilities);

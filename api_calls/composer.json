@@ -1,0 +1,6 @@
+{
+    "require": {
+        "scheb/yahoo-finance-api": "^3.1",
+        "mashape/unirest-php": "^3.0"
+    }
+}
