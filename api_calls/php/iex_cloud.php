@@ -18,7 +18,7 @@ $api_url_1 = "https://cloud.iexapis.com/stable/stock/";
 $api_url_2 = "/chart/max/?token=" . $api_token;
 
 
-$query = "SELECT `id`,`stock_ticker` FROM `companies`";
+$query = "SELECT `id`,`stock_ticker` FROM `companies` WHERE `id` = 122";
 $companies = mysqli_query($conn, $query);
 foreach ($companies as $company) {
     print($company["stock_ticker"] . "\n");

@@ -7,7 +7,7 @@ $db = '';
 $conn = mysqli_connect($host,$db_user,$db_password,$db);
 
 $row = 0;
-if (($handle = fopen("twitter_sentiment.csv", "r")) !== FALSE) {
+if (($handle = fopen("../../../data/local_data/twitter/twitter_sentiment.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle)) !== FALSE) {
         $index = $data[1];
         $company = addslashes($data[2]);
@@ -25,7 +25,8 @@ if (($handle = fopen("twitter_sentiment.csv", "r")) !== FALSE) {
 
         $sql = "INSERT INTO `twitter`(`index`, `company_name`, `tweet_text`, `hashtags`, `retweets`, `favorites`, `pre_clean_len`, `clean_text`, `overall_sentiment`, `positive_sentiment`, `neutral_sentiment`, `negative_sentiment`, `date`) VALUES ($index, '$company', '$tweet_text', '$hashtags', $retweets, $favorites, $pre_clean_len, '$clean_text', $overall_sentiment, $positive_sentiment, $neutral_sentiment, $negative_sentiment, '$date')";
         if ($row > 0) {
-            if (!mysqli_query($conn, $sql)) echo "$sql \n\n"; 
+            //if (!mysqli_query($conn, $sql)) echo "$sql \n\n"; 
+            echo "$sql \n\n";
             if (($row % 100000) == 0) echo "Completed row $row \n";
         }
         $row++;
