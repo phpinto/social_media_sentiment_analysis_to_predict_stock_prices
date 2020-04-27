@@ -1,9 +1,11 @@
 # social_media_sentiment_analysis_to_predict_revenues
 Final Project for CSE 6240 - Web Search &amp; Text Mining
 
+
+## Project Goal
 The goal of this project is to explore the concept of emotional theory in the stock market by understanding if social media sentiment analysis can be used to predict fluctuations in the stock price of a given company. To do so, we extracted, cleaned and generated sentiment for more than 3 million tweets on 54 companies and 4 million reddits on 30 companies traded in the S&P500.
 
-## Folder structured
+## Folder Structure
 The folders are organized the following way:
 
 * API_calls: 
@@ -18,6 +20,6 @@ The folders are organized the following way:
 
 
 ## Running the code
-
 To run the code you will have to download the datasets available on: 
 Download the twitter datasets separately and add them to the twitter_code folder on a folder named "tables". The jupyter notebooks should be able to run this way. 
+The notebooks are in order, which means you need to run the previous notebooks to get to the following ones. Alternatively, you can just import the datasets on one of the jupyternotebook files, since we are providing all the datasets on Google drive. So for instances, if you are just interested in modeling, you can just go to "Twitter_stockPrices_Prediction.ipynb" and read the "stocks_data_twitter.csv" available in the folder. 
