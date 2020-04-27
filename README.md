@@ -3,8 +3,8 @@ Final Project for CSE 6240 - Web Search &amp; Text Mining
 
 The goal of this project is to explore the concept of emotional theory in the stock market by understanding if social media sentiment analysis can be used to predict fluctuations in the stock price of a given company. To do so, we extracted, cleaned and generated sentiment for more than 3 million tweets on 54 companies and 4 million reddits on 30 companies traded in the S&P500.
 
-
-The github is organized the following way:
+## Folder structured
+The folders are organized the following way:
 
 * API_calls: 
   * Python - TwitterData.py -> contains the code to extract tweets using GetOldTweets3 python library. The parameters passed include: start and end date (in this case it was fixed from "2017-01-01" to "2020-04-02"), number of tweets to be extracted per hasthag per day (in this case it was fixed at 500) and hasthags to be extracted. The hasthags to be extracted come from a CSV file - "brands.csv" - which is included in the Google drive folder shared below. Because it takes a long time to extract all tweets, we extracted 10 tweets a time and we define the rows to be used as a parameter in the terminal. The command to run in the terminal includes "TwitterData.py brands.csv $first row - last row$ $output name". 
@@ -15,3 +15,9 @@ The github is organized the following way:
   * Term_frequency.ipynb -> Reads in the "term_freq_df.csv" available on Google Drive and performs an analysis of the top tokes on the dataset, top positive and top negative tokens (excluding StopWords). We plot frequencies and we visualize how many times each token appears on positive vs negative comments. Some of the visualizations are used in the final report.
   * Correlation_Stock_Twitter.ipynb -> Reads in "twitter_sentiment.csv" available on Google Drive and stock prices data "stock_prices.csv" available on Google Drive as well. It removes all data for stocks that is not available on Twitter dataset and combines both datasets, aggreagting tweets on a daily basis per company. A mean compounded, positive, negative and neutral score is calculates, as well as a weigthed compounded, positive, negative and neutral score, which is calculated by adjusting to the number of retweets. We then compared the standard mean with the weighted mean and computed correlations for industries and companies. We exported a csv file "stocks_data_twitter.csv" that we will use in the "Twitter_stockPrices_prediction.ipynb".
    * Twitter_stockPrices_Prediction.ipynb -> Reads in "stocks_data_twitter.csv" available on Google Drive. Performs K-means clustering using all mean sentiment scores as features. Imports the libraries for modeling, adds the time lag variables and creates functions for the models, for performance evaluation of the models and for the threshold analysis. Tests different models on different segmentation strategies. 
+
+
+## Running the code
+
+To run the code you will have to download the datasets available on: 
+Download the twitter datasets separately and add them to the twitter_code folder on a folder named "tables". The jupyter notebooks should be able to run this way. 
