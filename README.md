@@ -1,9 +1,11 @@
 # social_media_sentiment_analysis_to_predict_revenues
-Final Project for CSE 6240 - Web Search &amp; Text Mining
+Final Project for CSE 6240 - Web Search & Text Mining
 
 
 ## Project Goal
 The goal of this project is to explore the concept of emotional theory in the stock market by understanding if social media sentiment analysis can be used to predict fluctuations in the stock price of a given company. To do so, we extracted, cleaned and generated sentiment for more than 3 million tweets on 54 companies and 4 million reddits on 30 companies traded in the S&P500.
+
+https://github.com/phpinto/social_media_sentiment_analysis_to_predict_stock_prices
 
 ## Folder Structure
 The folders are organized the following way:
