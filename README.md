@@ -1,4 +1,4 @@
-# social_media_sentiment_analysis_to_predict_revenues
+# Social Media Sentiment Analysis To Predict Stock Prices
 Final Project for CSE 6240 - Web Search & Text Mining
 
 
