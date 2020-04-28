@@ -1,4 +1,4 @@
-# Social Media Sentiment Analysis To Predict Stock Prices
+# Using Social Media Sentiment Analysis to Predict Stock Prices
 Final Project for CSE 6240 - Web Search & Text Mining
 
 
