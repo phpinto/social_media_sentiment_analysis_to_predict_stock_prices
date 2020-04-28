@@ -11,7 +11,7 @@ https://github.com/phpinto/social_media_sentiment_analysis_to_predict_stock_pric
 The folders are organized the following way:
 
 * baselines: 
-  * This folder contains the Jupyter Notebooks to run the baseline models for both the twitter (twitter_baselines.ipynb) and reddit (reddit_baselines.ipynb) data. 
+  * This folder contains the Jupyter Notebooks to run the baseline models for both the twitter (twitter_baselines.ipynb) and reddit (reddit_baselines.ipynb) datasets. 
  
 * data: 
   * Contains a text file with the link to the google drive containing our datasets. 
