@@ -33,7 +33,7 @@ The folders are organized the following way:
 To run the code you will have to download the datasets available on: 
 https://drive.google.com/drive/folders/1JFBayDIIdu5C6wPM9jueHmPk6dd48ajC?usp=sharing
 
-**Save all data sets to the /data/ folder. Don't keep the reddit, twitter and stocks folders seen on google drive. Open each of those folders on google drive and save all the individual data files into the /data/ folder**
+**Save all data sets to the /data/ folder. Don't keep the reddit_datasets, twitter_datasets and stocks_datasets folders seen on google drive. Open each of those folders on google drive and save all the individual data files into the /data/ folder**
 
 ### Running code - "baselines"
 After downloading all the datasets into the /data/ folder, run the "jupyter notbook" command in this folder. After that, you can use your web browser to run all the code contained in the two notebooks.
