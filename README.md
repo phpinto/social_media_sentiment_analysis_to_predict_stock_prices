@@ -17,7 +17,10 @@ The folders are organized the following way:
   * Contains a text file with the link to the google drive containing our datasets. 
 
 * data_collection: 
-  * reddit -  
+  * reddit - The RedditData notebook executes all of the API calls and writes all the data to a csv, reddit_data.csv
+The CleanReddit notebook loads the reddit_data.csv and performs perfunctory cleaning operations for easy use and writes the data to reddit_data_clean.csv The Sentiment notebook loads the reddit_data_clean.csv and performs the sentiment analysis, writing out the reddit_text_sentiment.csv
+**It takes a long time to run these notebooks. For the convenience of the user, the reddit_data.csv, reddit_data_clean.csv, and reddit_text_sentiment files are provided in zipped format.
+
   * stocks - iex_cloud.php contains the code used to connect to the IEX Cloud Api. To run the code, you must first install the composer PHP dependency manager in your machine and run the command "composer install" in the data_collection folder. You also need an API key and registered account with IEX Cloud. After running this code and writing the stock data to a MySQL database, the phpMyAdmin GUI was used to convert it to a csv file. 
   * twitter - TwitterData.py -> contains the code to extract tweets using GetOldTweets3 python library. The parameters passed include: start and end date (in this case it was fixed from "2017-01-01" to "2020-04-02"), number of tweets to be extracted per hasthag per day (in this case it was fixed at 500) and hasthags to be extracted. The hasthags to be extracted come from a CSV file - "brands.csv" - which is included in the Google drive folder shared below. Because it takes a long time to extract all tweets, we extracted 10 tweets a time and we define the rows to be used as a parameter in the terminal. The command to run in the terminal includes "TwitterData.py brands.csv $first row - last row$ $output name". The twitter.php file writes the twitter data in the csv file into a MySQL database.
   * fortune_500 - This is a legacy folder for scraping revenue data from companies in the Fortune 500 lists. Because we pivoted from predicting revenuse to predicting stock prices, this folder is no longer relevant. 
@@ -39,7 +42,7 @@ https://drive.google.com/drive/folders/1JFBayDIIdu5C6wPM9jueHmPk6dd48ajC?usp=sha
 After downloading all the datasets into the /data/ folder, run the "jupyter notbook" command in this folder. After that, you can use your web browser to run all the code contained in the two notebooks.
 
 ### Running code - "reditt_code"
-
+The models notebook contains the procedure for testing out Random Forest and Boosting as well as a procedure for seeing results by company for the baselines and for the Random Forest and Boosting. Run the "jupyter notbook" command in this folder and use your web browser to run the code contained in the notebooks.
 
 ### Running code - "twitter_code"
 Download the twitter datasets separately and add them to the "/data/", folder as instructed earlier. The jupyter notebooks should be able to run this way. 
