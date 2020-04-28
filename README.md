@@ -32,7 +32,8 @@ The folders are organized the following way:
 ## Running the code
 To run the code you will have to download the datasets available on: 
 https://drive.google.com/drive/folders/1JFBayDIIdu5C6wPM9jueHmPk6dd48ajC?usp=sharing
+**Add all data sets to the /data/ folder**
 
 ### Running code - "twitter_code"
-Download the twitter datasets separately and add them to the "twitter_code" folder on a folder named "tables". The jupyter notebooks should be able to run this way. 
+Download the twitter datasets separately and add them to the "/data/", folder as instructed above. The jupyter notebooks should be able to run this way. 
 The notebooks are in order, which means you need to run the previous notebooks to get to the following ones. Alternatively, you can just import the datasets on one of the jupyternotebook files, since we are providing all the datasets on Google drive. So for instances, if you are just interested in modeling, you can just go to "Twitter_stockPrices_Prediction.ipynb" and read the "stocks_data_twitter.csv" available in the folder. 
